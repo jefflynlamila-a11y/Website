@@ -1,0 +1,156 @@
+AFTER MO IDAGDAG TOH PAKI DELETE NALANG NG FILE THANKYOUUU
+
+
+DAGDAG MO TO SA HTML AFTER NG HOME SECTION
+
+<!--Gallery-->
+  <section id="gallery" class="gallery">
+        <h2 class="section-title">GALLERY</h2>
+        
+        <div class="gallery-container">
+            <div class="gallery-wrapper">
+                <div class="gallery-card" data-subset="purposive">
+                    <h3>PURPOSIVE COMMUNICATION</h3>
+                </div>
+                <div class="gallery-card" data-subset="pathfit">
+                    <h3>PATHFIT</h3>
+                </div>
+                <div class="gallery-card" data-subset="nstp">
+                    <h3>NSTP</h3>
+                </div>
+                <div class="gallery-card" data-subset="feur">
+                    <h3>FEUR EVENTS</h3>
+                </div>
+            </div>
+
+            <div id="image-viewer" class="image-viewer-container hidden">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+ETO NAMAN SA CSS ADD MO LANG
+
+/*Gallery*/
+
+#gallery { 
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #011a0c; 
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px; 
+    gap: 20px;
+}
+
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    flex-basis: 100%; 
+    transition: flex-basis 0.5s ease;
+}
+
+.gallery-container.viewer-open .gallery-wrapper {
+    flex-basis: 40%;
+}
+
+.gallery-card {
+    position: relative;
+    flex: 1; 
+    height: 450px;
+    margin-left: -50px; 
+    transform: skewX(-15deg); 
+    overflow: hidden;
+    border: 3px solid white;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+}
+
+
+.gallery-card[data-subset="purposive"] { 
+    background-image: url('https://feuroosevelt.edu.ph/wp-content/uploads/2025/08/bg8x-scaled.jpg'); 
+}
+.gallery-card[data-subset="pathfit"] { 
+    background-image: url('https://feuroosevelt.edu.ph/wp-content/uploads/2025/08/bg8x-scaled.jpg'); 
+}
+.gallery-card[data-subset="nstp"] { 
+    background-image: url('https://feuroosevelt.edu.ph/wp-content/uploads/2025/08/bg8x-scaled.jpg'); 
+}
+.gallery-card[data-subset="feur"] { 
+    background-image: url('https://feuroosevelt.edu.ph/wp-content/uploads/2025/08/bg8x-scaled.jpg'); 
+}
+
+.gallery-card:first-child {
+    margin-left: 0; 
+}
+
+.gallery-card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    z-index: 2; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    transform: skewX(15deg); 
+}
+
+.gallery-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.4s ease;
+}
+
+.gallery-card[data-subset="purposive"]::after { background-color: rgba(128, 0, 128, 0.5); } 
+.gallery-card[data-subset="pathfit"]::after { background-color: rgba(218, 165, 32, 0.5); } 
+.gallery-card[data-subset="nstp"]::after { background-color: rgba(0, 128, 0, 0.5); } 
+.gallery-card[data-subset="feur"]::after { background-color: rgba(75, 0, 130, 0.5); } 
+
+
+.gallery-wrapper:hover .gallery-card {
+    flex: 1; 
+}
+
+.gallery-wrapper .gallery-card:hover {
+    flex: 2; 
+    transform: skewX(-15deg) scale(1.05); 
+    border-color: gold;
+    filter: blur(0);
+}
+
+.gallery-card:hover::after {
+    background-color: rgba(0,0,0,0.2); 
+}
