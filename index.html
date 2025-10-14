@@ -3,29 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel = "stylesheet" href="style.css">
-    <script src = "script.js" defer></script>
+    <title>JAG Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!--Navbar-->
-    <nav class = "navbar">
-        <div class = "nav-container">
-            <ul class = "nav-links">
-                <li><a href = "#Home">Home</a></li>
-                <li><a href = "#Gallery">Gallery</a></li>
-                <li><a href ="#About">About</a></li>
-                <li><a href = "#ContactUs">Contact Us</a></li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home" class="active" data-section='hero'>Home</a></li>
+                <li><a href="#gallery" data-section="gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#about">Contact Us</a></li>
             </ul>
         </div>
     </nav>
+
     <!--Hero Section-->
-    <section class = "hero">
-        <div class = "hero-content">
-            <h1>BE BRAVE, BE <span class = "highlight">JAG</span></h1>
-            <p>A documentary website made by <span class = "highlight">JAG</span> that consists of <em>memories</em>, <em>laughter</em>, and the <em>moments</em> that made us who we are.</p>
-            <p class = "small">
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>BE BRAVE, BE <span class="highlight">JAG</span></h1>
+            <p>A documentary website made by <span class="highlight">JAG</span> that consists of <em>memories</em>, <em>laughter</em>, and the <em>moments</em> that made us who we are.</p>
+            <p class="small">
                 Made by <span class="highlight">JAG</span> — Not just a website. Our digital yearbook, bloopers and all.</p>
+        </div>
     </section>
+
+    <!--Gallery Section-->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">GALLERY</h2>
+        
+        <div class="gallery-container">
+            <div class="gallery-wrapper">
+                <div class="gallery-card" data-subset="purposive">
+                    <h3>PURPOSIVE COMMUNICATION</h3>
+                </div>
+                <div class="gallery-card" data-subset="pathfit">
+                    <h3>PATHFIT</h3>
+                </div>
+                <div class="gallery-card" data-subset="nstp">
+                    <h3>NSTP</h3>
+                </div>
+                <div class="gallery-card" data-subset="feur">
+                    <h3>FEUR EVENTS</h3>
+                </div>
+            </div>
+            <div id="image-viewer" class="image-viewer-container hidden"></div>
+        </div>
 </body>
 </html>
