@@ -16,19 +16,18 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url(Photos/563201949_657506767179460_1331458059054956249_n.png);
-    /* Removed overflow: hidden to allow scrolling */
     color: white;
 }
 
 /*Navigation bar styles*/
 nav {
     position: fixed;
-    top: 50px;
+    top: 25px;
     width: 100%;
-    background: transparent;
     padding: 1rem 0;
     z-index: 1000;
 }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -38,46 +37,47 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 600;
     letter-spacing: 1px;
-    position: relative;
-    font-size: larger;
+    position: relative; 
+    font-size: 1rem;
     transition: color 0.3s ease;
+    text-transform: uppercase;
+    display: inline-block; 
+    padding: 0.5rem 1rem; 
 }
-nav ul li a:hover {
-    color: goldenrod;
-}
+
 nav ul li a::after {
     content: "";
     position: absolute;
     bottom: -6px;
     left: 50%;
-    transform: translateX(-50%) scale(0);
-    transform-origin: center;
-    width: 50%;
-    height: 3px;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%; 
+    height: 2px;
     background: gold;
-    transition: width 0.3s ease;
+    transition: transform 0.3s ease;
+    transform-origin: center; 
 }
+
 nav ul li a:hover::after {
-    transform: translateX(-50%) scale(1);
-    width: 100%;
+    transform: translateX(-50%) scaleX(1); 
 }
+
 nav ul li a.active {
     color: gold;
 }
+
 nav ul li a.active::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: gold;
+    transform: translateX(-50%) scaleX(1);
+}
+
+nav ul li a {
+    white-space: nowrap;
 }
 
 /*Hero section styles*/
