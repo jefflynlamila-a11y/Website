@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel = "stylesheet" href="Design.css">
+</head>
+<body>
+    <!--Navbar-->
+    <nav class = "navbar">
+        <div class = "nav-container">
+            <ul class = "nav-links">
+                <li><a href = "#home" class = "active">Home</a></li>
+                <li><a href = "#gallery">Gallery</a></li>
+                <li><a href ="#about">About</a></li>
+                <li><a href = "#contactUs">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Hero Section-->
+    <section class = "home" id="home">
+        <div class = "home-content">
+            <h1>BE BRAVE, BE <span class = "highlight">JAG</span></h1>
+            <p>A documentary website made by <span class = "highlight">JAG</span> that consists of <em>memories</em>, <em>laughter</em>, and the <em>moments</em> that made us who we are.</p>
+            <p class = "small">
+                Made by <span class="highlight">JAG</span> — Not just a website. Our digital yearbook, bloopers and all.</p>
+    </section>
+    
+    <!--Gallery Section-->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">GALLERY</h2>
+        
+        <div class="gallery-container">
+            <div class="gallery-wrapper">
+                <div class="gallery-card" data-subset="purposive">
+                    <h3>PURPOSIVE COMMUNICATION</h3>
+                </div>
+                <div class="gallery-card" data-subset="pathfit">
+                    <h3>PATHFIT</h3>
+                </div>
+                <div class="gallery-card" data-subset="nstp">
+                    <h3>NSTP</h3>
+                </div>
+                <div class="gallery-card" data-subset="feur">
+                    <h3>FEUR EVENTS</h3>
+                </div>
+            </div>
+            <div id="image-viewer" class="image-viewer-container hidden"></div>
+        </div>
+        </section>
+        <div id="modal-viewer" class="modal-viewer hidden">
+            <span class="close-button">&times;</span>
+            <img class="modal-content" id="full-image" alt="Full size gallery image"/>
+            <a class="prev-button">&#10094;</a>
+            <a class="next-button">&#10095;</a>
+        </div>
+    <!--About Section-->
+    <section id="about" class="about-section">
+        <button class="hamburger" id="hamburger-btn" aria-controls="about-sidebar" aria-expanded="false">☰</button>
+        <div class="about-sidebar" id="about-sidebar" aria-hidden="true">
+            <div class="about-title">
+                <h2>ABOUT</h2>
+                <button class="close-btn" id="close-btn" aria-label="Close">&times;</button>
+            </div>
+            <ul class="about-links">
+                <li><a href="#">Brief story of Friendship</a></li>
+                <li><a href="#">Visit - subjects</a></li>
+                <li><a href="#">Privacy Policy - Assurance of privacy taken</a></li>
+                <li><a href="#">Mission & Vision</a></li>
+                <li><a href="#">Core values</a></li>
+                <li><a href="#">Achievements</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="Function.js"></script>
+</body>
+</html>
