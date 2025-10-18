@@ -26,54 +26,37 @@
             <p class = "small">
                 Made by <span class="highlight">JAG</span> — Not just a website. Our digital yearbook, bloopers and all.</p>
     </section>
-    
-    <!--Gallery Section-->
-    <section id="gallery" class="gallery">
-        <h2 class="section-title">GALLERY</h2>
-        
-        <div class="gallery-container">
-            <div class="gallery-wrapper">
-                <div class="gallery-card" data-subset="purposive">
-                    <h3>PURPOSIVE COMMUNICATION</h3>
-                </div>
-                <div class="gallery-card" data-subset="pathfit">
-                    <h3>PATHFIT</h3>
-                </div>
-                <div class="gallery-card" data-subset="nstp">
-                    <h3>NSTP</h3>
-                </div>
-                <div class="gallery-card" data-subset="feur">
-                    <h3>FEUR EVENTS</h3>
-                </div>
-            </div>
-            <div id="image-viewer" class="image-viewer-container hidden"></div>
-        </div>
-        </section>
-        <div id="modal-viewer" class="modal-viewer hidden">
-            <span class="close-button">&times;</span>
-            <img class="modal-content" id="full-image" alt="Full size gallery image"/>
-            <a class="prev-button">&#10094;</a>
-            <a class="next-button">&#10095;</a>
-        </div>
-    <!-- About Section: hamburger opens an off-canvas sidebar -->
-    <section id="about" class="about-section">
-        <button class="hamburger" id="hamburger-btn" aria-controls="about-sidebar" aria-expanded="false">☰</button>
-        <div class="about-sidebar" id="about-sidebar" aria-hidden="true">
-            <div class="about-title">
-                <h2>ABOUT</h2>
-                <button class="close-btn" id="close-btn" aria-label="Close">&times;</button>
-            </div>
-            <ul class="about-links">
-                <li><a href="#">Brief story of Friendship</a></li>
-                <li><a href="#">Visit - subjects</a></li>
-                <li><a href="#">Privacy Policy - Assurance of privacy taken</a></li>
-                <li><a href="#">Mission & Vision</a></li>
-                <li><a href="#">Core values</a></li>
-                <li><a href="#">Achievements</a></li>
-            </ul>
-        </div>
-    </section>
+    <!--Carousel-->
+<section class="carousel-wrap">
+  <div class="carousel-viewport">
+    <div class="carousel" id="carousel">
+      <div class="slide" data-title="Cybercrime Prevention" data-sub="Sept 24, 2025">
+        <img src="PATHFIT/IMG_3851.JPG" alt="">
+        <div class="caption"><div class="cap-inner"><strong>EVENT TITLE</strong><span>LOREM IPSUM</span></div></div>
+      </div>
+      <div class="slide" data-title="Intrams" data-sub="Oct 2025">
+        <img src="PATHFIT/IMG_3852.JPG" alt="">
+        <div class="caption"><div class="cap-inner"><strong>EVENT TITLE</strong><span>LOREM IPSUM</span></div></div>
+      </div>
+      <div class="slide" data-title="ICT Week" data-sub="Nov 2025">
+        <img src="PATHFIT/IMG_3853.JPG" alt="">
+        <div class="caption"><div class="cap-inner"><strong>EVENT TITLE</strong><span>LOREM IPSUM</span></div></div>
+      </div>
+      <div class="slide" data-title="Event Title" data-sub="Event Date">
+        <img src="PATHFIT/IMG_3855.JPG" alt="">
+        <div class="caption"><div class="cap-inner"><strong>EVENT TITLE</strong><span>LOREM IPSUM</span></div></div>
+    </div>
+  </div>
 
+  <!-- Arrows -->
+  <button class="arrow arrow-left" id="prevBtn" aria-label="Previous">&#10094;</button>
+  <button class="arrow arrow-right" id="nextBtn" aria-label="Next">&#10095;</button>
+
+  <!-- Dots / progress bars -->
+  <div class="dots" id="dots"></div>
+</section>
+
+    <!--Gallery Section-->
     <script src="Function.js"></script>
 </body>
 </html>
